@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jeep </title>
+        <style>
+            body{
+                background: grey;
+            }
+            .jeep{
+                background: linear-gradient(black, grey);
+                border-radius: 30px;
+                width: 800px;
+                display: block;
+                margin: 0 auto;
+            }
+            h1 {
+                text-align: center;
+                color: gold;
+                border: 1px solid gold;
+                font-size: 50px;
+            }
+
+            h2 {
+                text-align: center;
+                padding: 15px;
+                font-size: 18px;
+                border-radius: 4px;
+                color: white;
+            }
+
+            img {
+                display: block;
+                margin: 0 auto;
+                max-width: 100%;
+                border-radius: 10px;
+            }
+
+            p {
+                line-height: 1.7;
+                font-size: 18px;
+                margin: 20px 0 10px;
+                color: white;
+            }
+
+            button {
+                display: block;
+                margin: 20px auto;
+                background: gold;
+                color: black;
+                font-size: 18px;
+                padding: 15px 20px;
+                border: none;
+                border-radius: 6px;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+                transition: all 200ms ease-in-out;
+            }
+
+            button:hover {
+                opacity: 1;
+                cursor: pointer;
+                background: linear-gradient(#e66465, #9198e5);
+            }
+
+            .container {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 15px 60px;
+            }
+
+            .more {
+                color: gold;
+                text-decoration: none;
+                font-size: 12px;
+            }
+
+            .more:hover {
+                text-decoration: underline;
+            } 
+        </style>
+    </head>
+    <body>
+        <div class="jeep">
+            <div class="container">
+                <h1>
+                    I love Jeep
+                </h1>
+                <h2>
+                    Especially Jeep Wrangler
+                </h2>
+                <hr/>
+                <br/>
+                <img
+                    src="https://cdn.whatnext.pl/uploads/2020/09/premiera-jeep-wrangler-4xe-czyli-w-teren-z-podwojna-elektryczna-moca-1-1290x541-c-center.jpg"
+                    alt="Jeep Wrangler"/>
+                <br/>
+                <hr/>
+                <p>
+                    <strong>Jeep</strong> is a brand of American automobile and also a division of FCA US LLC (formerly Chrysler Group, LLC), a wholly owned subsidiary of the Italian-American corporation Fiat Chrysler Automobiles.
+                    Jeep has been part of Chrysler since 1987, when Chrysler acquired the Jeep brand, along with remaining assets, from its previous owner American Motors Corporation (AMC).
+                </p>
+                <br/>
+                <p>The <strong>Jeep Wrangler</strong> is a series of compact and mid-size (2-door Wrangler, and a longer wheelbase / 4-door Wrangler Unlimited) four-wheel drive off-road SUVs, manufactured by Jeep since 1986, and currently in its fourth generation. The Wrangler JL, the most recent generation, was unveiled in late 2017 and is produced at Jeep's Toledo Complex.</p>
+                <a href="https://en.wikipedia.org/wiki/Jeep_Wrangler"
+                    target="_blank"
+                    class="more" >    
+                    Learn more on Wikipedia
+                </a>
+                <button class="buy-button">
+                    🤑 <strong>Buy Jeep</strong>
+                </button>
+                <br/>
+                <p>The world is your fable when it comes to off-roading. No matter where on the globe you happen to find yourself, you are guaranteed to find a thrilling off-road trail to set your soul on fire.</p>
+                <br/>
+                <hr/>
+                <img src="https://motofilm.pl/wp-content/uploads/2012/04/jeep-wrangler-action-camper-rv_04.jpg" alt="jeep night"/>
+                <hr/>
+                <br/>
+            </div>
+        </div>
+        <script>
+            function buy() {
+            let name = prompt ("What your name?");
+            let country = prompt("What is your country?");
+                alert ("Hello," + name + "!");
+            if(country === "France" || country === "france"){
+                    
+                    window.location.href = "https://www.jeep.fr/";
+                }else{
+                    if(country === "Germany" || country === "gremany"){
+                        window.location.href = "https://www.jeep.de/";
+                    }else{
+                        window.location.href =  "https://www.jeep.com/";
+                    }
+                    
+                }
+              
+            }
+            
+            let buyButton = document.querySelector(".buy-button");
+            buyButton.addEventListener("click", buy);
+        </script>
+    </body>
+</html>
